@@ -37,8 +37,21 @@ btnNo.addEventListener('touchstart', (e) => {
     moverBotonNo();
 });
 
+// Animación de corazones
 btnSi.addEventListener('click', () => {
-    confetti({ particleCount: 120, spread: 70, origin: { y: 0.6 } });
+    const heart = confetti.shapeFromPath({
+        path: 'M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -75,-76 -151,-151 -151,-227 0,-42 34,-75 76,-75 38,0 56,18 75,56z'
+    });
+
+    confetti({
+        shapes: [heart],
+        scalar: 2,
+        particleCount: 60,
+        spread: 100,
+        origin: { y: 0.6 },
+        colors: ['#f7a8b8', '#f9c5d1', '#e56b8f', '#ffffff']
+    });
+
     btnNo.style.display = 'none';
     btnSi.style.display = 'none';
     mensajeFinal.classList.remove('oculto');

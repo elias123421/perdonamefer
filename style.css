@@ -6,8 +6,13 @@
 }
 
 body {
-    background-color: #fff0f5;
-    color: #4a3f44;
+    background-color: #fdf0f4;
+    /* Si quieres poner una imagen de fondo en assets/fondo.jpg, descomenta la siguiente línea: */
+    /* background-image: linear-gradient(rgba(253, 240, 244, 0.85), rgba(253, 240, 244, 0.85)), url('assets/fondo.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #4a3b42;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,12 +35,12 @@ body {
 
 .card {
     background: #ffffff;
-    border: 2px solid #ffd1dc;
-    border-radius: 16px;
+    border: 2px solid #f9c5d1;
+    border-radius: 20px;
     padding: 28px;
     width: 100%;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 10px 30px rgba(249, 197, 209, 0.4);
 }
 
 .inicio-card,
@@ -48,15 +53,15 @@ body {
 }
 
 .card h1 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    line-height: 1.3;
-    color: #ff6f91;
+    font-size: 22px;
+    margin-bottom: 14px;
+    line-height: 1.35;
+    color: #e56b8f;
 }
 
 .card p {
     font-size: 14px;
-    color: #5c4f54;
+    color: #5e4c54;
     margin-bottom: 20px;
 }
 
@@ -67,7 +72,7 @@ body {
 
 .subtexto {
     font-size: 13px;
-    color: #9c8991;
+    color: #9d818d;
     margin: 12px 0 24px 0;
 }
 
@@ -75,7 +80,7 @@ body {
     text-align: left;
     line-height: 1.6;
     font-size: 14px;
-    color: #5c4f54;
+    color: #5e4c54;
     margin: 18px 0;
 }
 
@@ -99,43 +104,46 @@ body {
 
 .btn-primary,
 .btn-secondary {
-    padding: 10px 22px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
     font-weight: 600;
     cursor: pointer;
     width: 100%;
-    max-width: 250px;
+    max-width: 260px;
     transition: all 0.2s ease;
 }
 
+/* Rosa pastel */
 .btn-primary {
-    background: #ff8fab;
-    color: #fff;
+    background: #f7a8b8;
+    color: #ffffff;
     border: none;
-    box-shadow: 0 4px 10px rgba(255, 143, 171, 0.4);
+    box-shadow: 0 4px 12px rgba(247, 168, 184, 0.45);
 }
 
 .btn-primary:hover {
-    background: #ff7aa2;
+    background: #f392a5;
 }
 
+/* Secundario rosa suave (sin rojo) */
 .btn-secondary {
     background: #fff;
-    color: #ff6f91;
-    border: 2px solid #ffb3c6;
+    color: #e56b8f;
+    border: 2px solid #f9c5d1;
 }
 
 .btn-secondary:hover {
-    background: #fff5f7;
+    background: #fdf0f4;
 }
 
 #mensaje-final {
     margin-top: 20px;
-    padding: 12px;
-    background: #ffe4e8;
-    border-radius: 8px;
-    color: #d81159;
+    padding: 14px;
+    background: #fde8ee;
+    border-radius: 12px;
+    color: #c94a70;
     font-weight: 600;
+    border: 1px solid #f9c5d1;
 }
 
 .oculto {
@@ -154,17 +162,17 @@ body {
 
 .spotify-card {
     background: #ffffff;
-    border: 2px solid #ffd1dc;
-    border-radius: 16px;
+    border: 2px solid #f9c5d1;
+    border-radius: 20px;
     padding: 20px;
     width: 100%;
     max-width: 400px;
-    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 10px 30px rgba(249, 197, 209, 0.4);
 }
 
 .spotify-card h3 {
     font-size: 16px;
     margin-bottom: 15px;
-    color: #ff6f91;
+    color: #e56b8f;
     text-align: center;
 }

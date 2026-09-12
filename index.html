@@ -29,17 +29,14 @@
   <section id="reproductor" class="pantalla oculta">
     <div class="card repro-card">
       <div class="disco-container">
-        <!-- Corazón giratorio en lugar del disco feo -->
         <div id="disco" class="disco-animado rotar">💖</div>
       </div>
       <h2>Andrés Calamaro</h2>
       <h3>Flaca</h3>
       <p class="subtexto">Tú sabes que esta canción siempre que suena, me recuerda a una sola persona 🌷.</p>
-
       <div class="controles-musica">
         <button id="btn-play-pause" class="btn-control">⏸ Pausar</button>
       </div>
-
       <button id="btn-ir-carta" class="btn-secondary mt-3">Ver tu cartita 💌</button>
     </div>
   </section>
@@ -47,6 +44,7 @@
   <section id="carta" class="pantalla oculta">
     <div class="layout-dos-columnas">
 
+      <!-- COLUMNA IZQUIERDA: LA CARTA -->
       <div class="card carta-card">
         <h1>¿Me disculpas? 🥺</h1>
         <div class="cuerpo-carta">
@@ -76,18 +74,31 @@
         </div>
         <div class="botones-container">
           <button id="btn-si" class="btn-primary">¡Siiiiiiiiiiiiii! ✨</button>
-          <button id="btn-no" class="btn-secondary">Sí, 67 💕</button>
+          <button id="btn-no" class="btn-secondary">No , 67 </button>
         </div>
         <div id="mensaje-final" class="oculto">
           <p>Muchas gracias, ya prometiste quedarte conmigo para siempre, no hay vuelta para atrás 💖✨.</p>
         </div>
       </div>
 
-      <div class="spotify-card">
-        <h3>Música para Ferchis 🎀🎶</h3>
-        <p class="subtexto">Te armé una playlist especial. Ábrela aquí para guardarla.</p>
-        <a href="https://open.spotify.com/playlist/TU_ID_DE_PLAYLIST_AQUI" target="_blank" class="btn-spotify">✨ Abrir
-          en Spotify ✨</a>
+      <!-- COLUMNA DERECHA: SPOTIFY + REGALOS -->
+      <div class="columna-secundaria">
+
+        <div class="spotify-card">
+          <h3>Música para Ferchis 🎀🎶</h3>
+          <p class="subtexto">Te armé una playlist especial. Ábrela aquí para guardarla.</p>
+          <a href="https://open.spotify.com/playlist/TU_ID_DE_PLAYLIST_AQUI" target="_blank" class="btn-spotify">✨ Abrir
+            en Spotify ✨</a>
+        </div>
+
+        <div class="regalos-card">
+          <h3>Cajita de Regalos 🎁</h3>
+          <p class="subtexto">Toca la cajita para canjear tus premios.</p>
+          <div id="caja-regalo" class="caja-animada">🎁</div>
+          <p id="regalo-resultado" class="oculto"></p>
+          <button id="btn-regalo" class="btn-primary mt-3">Sacar un regalo ✨</button>
+        </div>
+
       </div>
 
     </div>

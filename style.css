@@ -63,7 +63,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Animación del disco */
 .disco-container {
     font-size: 70px;
     margin-bottom: 15px;
@@ -205,24 +204,32 @@ body {
     flex-wrap: wrap;
 }
 
-.spotify-card {
+.columna-secundaria {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.spotify-card,
+.regalos-card {
     background: #ffffff;
     border: 2px solid #f9c5d1;
     border-radius: 20px;
     padding: 25px 20px;
     width: 100%;
-    max-width: 400px;
     box-shadow: 0 10px 30px rgba(249, 197, 209, 0.4);
     text-align: center;
 }
 
-.spotify-card h3 {
+.spotify-card h3,
+.regalos-card h3 {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #1DB954;
+    color: #e56b8f;
 }
 
-/* Botón estilo Spotify */
 .btn-spotify {
     display: inline-block;
     background: #1DB954;
@@ -239,4 +246,56 @@ body {
 .btn-spotify:hover {
     background: #1aa34a;
     transform: scale(1.05);
+}
+
+/* Cajita de Regalos */
+.caja-animada {
+    font-size: 65px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    user-select: none;
+    margin: 10px 0;
+}
+
+.caja-animada:active {
+    transform: scale(0.9);
+}
+
+.efecto-shake {
+    animation: shake 0.4s cubic-bezier(.36, .07, .19, .97) both;
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-2px, 0, 0) rotate(-5deg);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(4px, 0, 0) rotate(5deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-6px, 0, 0) rotate(-5deg);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(6px, 0, 0) rotate(5deg);
+    }
+}
+
+#regalo-resultado {
+    font-size: 16px;
+    color: #d81159;
+    font-weight: bold;
+    margin-top: 15px;
+    padding: 12px;
+    background: #fff0f5;
+    border-radius: 12px;
+    border: 2px dashed #f9c5d1;
 }

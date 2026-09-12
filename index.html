@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>67</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body>
+  <!-- ASEGÚRATE DE QUE LA RUTA DEL MP3 SEA CORRECTA -->
+  <audio id="cancion" src="assets/flaca.mp3" loop></audio>
+
+  <section id="inicio" class="pantalla activa">
+    <div class="card inicio-card">
+      <h1>¡Hola Ferchis! Todo el tiempo que hemos pasado me ha encantado, siento que nosotros nos complementamos el uno
+        al otro, somos un excelente equipo: yo creando las cosas, tú corrigiendo mis errores y alegrando mi día.</h1>
+      <p>¿Qué quieres hacer primero?</p>
+      <div class="botones-container col">
+        <button id="btn-opcion-musica" class="btn-primary">Me quedé pensando en la canción que te dije que me recuerda a
+          ti… ¿la escuchamos juntos?</button>
+        <button id="btn-opcion-carta" class="btn-primary">También te tengo un mensaje</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="reproductor" class="pantalla oculta">
+    <div class="card repro-card">
+      <div class="icono">📻</div>
+      <h2>Andrés Calamaro</h2>
+      <h3>Flaca</h3>
+      <p class="subtexto">Tú sabes que esta canción siempre que suena, me recuerda a una sola persona.</p>
+      <button id="btn-ir-carta" class="btn-secondary">Vamos a la carta que te hice</button>
+    </div>
+  </section>
+
+  <section id="carta" class="pantalla oculta">
+    <div class="layout-dos-columnas">
+
+      <div class="card carta-card">
+        <h1>¿Me disculpas?</h1>
+        <div class="cuerpo-carta">
+          <p>Hay días en los que ni siquiera yo sé qué estoy haciendo. Llego a la escuela con todo encima, pero te veo a
+            ti y encuentro un pequeño momento de alegría; uno en el que todas las responsabilidades y los problemas se
+            me olvidan, hasta el entrar a clases. Si tuviera que pedir que una de mis personas favoritas se quede
+            siempre conmigo, esa persona tiene tu nombre y tu apellido. Además, quiero pedirte perdón por cualquier
+            momento en el que haya podido hacerte sentir mal.</p>
+          <p>
+            Hay días en que el mundo pesa más de la cuenta,<br>
+            un invierno callado que nubla lo que soy.<br>
+            Llego a tientas, con el ruido a cuestas,<br>
+            sin entender muy bien hacia dónde voy.<br>
+            Pero apareces tú,<br>
+            y el peso se detiene.<br>
+            Eres ese verano que no pide explicaciones,<br>
+            la calma que desarma todas mis razones,<br>
+            la certeza sencilla en medio del desorden.
+          </p>
+          <p>
+            Si el tiempo corre y todo cambia de lugar,<br>
+            quiero que sepas que en este rincón del mundo,<br>
+            eres mi persona favorita,<br>
+            el lugar exacto donde da gusto respirar.
+          </p>
+          <p><strong>Quédate conmigo para siempre, ¿qué dices?</strong></p>
+        </div>
+        <div class="botones-container">
+          <button id="btn-si" class="btn-primary">siiiiiiiiiiiiii</button>
+          <button id="btn-no" class="btn-secondary">si, 67</button>
+        </div>
+        <div id="mensaje-final" class="oculto">
+          <p>Muchas gracias, ya prometiste quedarte conmigo para siempre, no hay vuelta para atrás.</p>
+        </div>
+      </div>
+
+      <div class="spotify-card">
+        <h3>Música para Ferchis 🎵</h3>
+        <!-- PEGA AQUÍ TU IFRAME DE SPOTIFY Y REEMPLAZA ESTE COMENTARIO -->
+        <iframe style="border-radius:12px"
+          src="https://open.spotify.com/embed/playlist/TU_ID_DE_PLAYLIST_AQUI?utm_source=generator&theme=0" width="100%"
+          height="352" frameBorder="0" allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

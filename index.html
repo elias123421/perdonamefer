@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <!-- ASEGÚRATE DE QUE LA RUTA DEL MP3 SEA CORRECTA -->
   <audio id="cancion" src="assets/flaca.mp3" loop></audio>
 
   <section id="inicio" class="pantalla activa">
@@ -26,13 +25,21 @@
     </div>
   </section>
 
+  <!-- REPRODUCTOR INTERACTIVO MEJORADO -->
   <section id="reproductor" class="pantalla oculta">
     <div class="card repro-card">
-      <div class="icono">📻</div>
+      <div class="disco-container">
+        <div id="disco" class="disco-animado rotar">💿</div>
+      </div>
       <h2>Andrés Calamaro</h2>
       <h3>Flaca</h3>
       <p class="subtexto">Tú sabes que esta canción siempre que suena, me recuerda a una sola persona.</p>
-      <button id="btn-ir-carta" class="btn-secondary">Vamos a la carta que te hice</button>
+
+      <div class="controles-musica">
+        <button id="btn-play-pause" class="btn-control">⏸ Pausar Música</button>
+      </div>
+
+      <button id="btn-ir-carta" class="btn-secondary mt-3">Vamos a la carta que te hice</button>
     </div>
   </section>
 
@@ -68,20 +75,20 @@
         </div>
         <div class="botones-container">
           <button id="btn-si" class="btn-primary">siiiiiiiiiiiiii</button>
-          <button id="btn-no" class="btn-secondary">no, 67</button>
+          <button id="btn-no" class="btn-secondary">si, 67</button>
         </div>
         <div id="mensaje-final" class="oculto">
           <p>Muchas gracias, ya prometiste quedarte conmigo para siempre, no hay vuelta para atrás.</p>
         </div>
       </div>
 
+      <!-- SPOTIFY CON BOTÓN EXTERNO -->
       <div class="spotify-card">
         <h3>Música para Ferchis 🎵</h3>
-        <!-- PEGA AQUÍ TU IFRAME DE SPOTIFY Y REEMPLAZA ESTE COMENTARIO -->
-        <iframe style="border-radius:12px"
-          src="https://open.spotify.com/playlist/2gYCgPmlBAFEijcN2AlknA?si=XemdakDsRQag_TNOEbeKyA&utm_source=copy-link&pi=oamzUIByQ-2eZ"
-          width="100%" height="352" frameBorder="0" allowfullscreen=""
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p class="subtexto">Te armé una playlist especial. Ábrela aquí para guardarla en tu cuenta.</p>
+        <!-- REEMPLAZA EL ENLACE CON EL LINK REAL DE TU PLAYLIST -->
+        <a href="https://open.spotify.com/playlist/TU_ID_DE_PLAYLIST_AQUI" target="_blank" class="btn-spotify">🎧 Abrir
+          en Spotify</a>
       </div>
 
     </div>

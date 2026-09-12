@@ -9,8 +9,18 @@ const btnSi = document.getElementById('btn-si');
 const btnNo = document.getElementById('btn-no');
 const mensajeFinal = document.getElementById('mensaje-final');
 
+// Nuevas variables para el reproductor interactivo
+const btnPlayPause = document.getElementById('btn-play-pause');
+const disco = document.getElementById('disco');
+let isPlaying = false;
+
 btnOpcionMusica.addEventListener('click', () => {
-    audio.play().catch(() => { });
+    audio.play().then(() => {
+        isPlaying = true;
+        disco.classList.remove('pausado');
+        btnPlayPause.textContent = '⏸ Pausar Música';
+    }).catch(() => { });
+
     pantallaInicio.classList.add('oculta');
     pantallaReproductor.classList.remove('oculta');
 });
@@ -25,6 +35,20 @@ btnIrCarta.addEventListener('click', () => {
     pantallaCarta.classList.remove('oculta');
 });
 
+// Lógica de Pausa/Reproducir
+btnPlayPause.addEventListener('click', () => {
+    if (isPlaying) {
+        audio.pause();
+        disco.classList.add('pausado');
+        btnPlayPause.textContent = '▶ Reproducir Música';
+    } else {
+        audio.play();
+        disco.classList.remove('pausado');
+        btnPlayPause.textContent = '⏸ Pausar Música';
+    }
+    isPlaying = !isPlaying;
+});
+
 function moverBotonNo() {
     const x = (Math.random() - 0.5) * 200;
     const y = (Math.random() - 0.5) * 150;
@@ -37,7 +61,6 @@ btnNo.addEventListener('touchstart', (e) => {
     moverBotonNo();
 });
 
-// Animación de corazones
 btnSi.addEventListener('click', () => {
     const heart = confetti.shapeFromPath({
         path: 'M167 72c19,-38 37,-56 75,-56 42,0 76,33 76,75 0,76 -76,151 -151,227 -75,-76 -151,-151 -151,-227 0,-42 34,-75 76,-75 38,0 56,18 75,56z'
